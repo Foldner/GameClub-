@@ -1,0 +1,72 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using DAL.Interfaces;
+using DAL.Entities;
+
+namespace DAL.Repositories
+{
+    public class ReportRepository : IReportsReprository
+    {
+        private GCdb db;
+
+        public ReportRepository(GCdb dbcontext)
+        {
+            db = dbcontext;
+        }
+
+        public class preResSalary
+        {
+            public int ID { get; set; }
+            public int DelivID { get; set; }
+            public string CourierName { get; set; }
+            public double Price { get; set; }
+            public int? Car { get; set; }
+        }
+
+        //public List<IncomeModel> IncomeCount(DateTime s, DateTime f)
+        //{
+            //var PreRes = (from cour in db.Order
+            //              join deliv in db.Device
+            //              on cour.Id equals deliv.Id
+            //              where (s <= deliv.Date && f >= deliv.Date)
+            //              select new preResSalary
+            //              {
+            //                  ID = cour.ID,
+            //                  DelivID = deliv.ID,
+            //                  CourierName = cour.CourierName,
+            //                  Price = deliv.Distance * deliv.KmPrice,
+            //                  Car = deliv.Transport_ID_FK
+            //              }).ToList();
+
+            //List<Order> allorders = db.Order.ToList();
+            //double ordCount;
+
+            //foreach (preResSalary ps in PreRes)
+            //{
+            //    ordCount = allorders.Where(i => i.Delivery_ID_FK == ps.DelivID).Count();
+            //    if (ps.Car != null || ps.Car != 1)
+            //        ps.Price = ps.Price * 0.75;
+            //    ps.Price = ps.Price * (0.9 + (ordCount / 10));
+            //}
+
+        //    var CourSal = (from pr in PreRes
+        //                   group pr by new { pr.ID, pr.CourierName } into g
+        //                   select new CourierSalaryModel
+        //                   {
+        //                       ID = g.Key.ID,
+        //                       CourierName = g.Key.CourierName,
+        //                       Salary = g.Sum(x => x.Price)
+        //                   }
+        //                  ).ToList();
+        //    return null;
+        //}
+
+        List<IncomeCountModel> IReportsReprository.IncomeCount(DateTime s, DateTime f)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}

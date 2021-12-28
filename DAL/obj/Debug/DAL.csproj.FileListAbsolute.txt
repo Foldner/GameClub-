@@ -1,0 +1,11 @@
+J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\DAL\bin\Debug\DAL.dll.config
+J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\DAL\bin\Debug\DAL.dll
+J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\DAL\bin\Debug\DAL.pdb
+J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\DAL\bin\Debug\EntityFramework.dll
+J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\DAL\bin\Debug\EntityFramework.SqlServer.dll
+J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\DAL\bin\Debug\EntityFramework.xml
+J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\DAL\bin\Debug\EntityFramework.SqlServer.xml
+J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\DAL\obj\Debug\DAL.csproj.CopyComplete
+J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\DAL\obj\Debug\DAL.dll
+J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\DAL\obj\Debug\DAL.pdb

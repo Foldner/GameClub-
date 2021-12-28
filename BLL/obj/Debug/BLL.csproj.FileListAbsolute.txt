@@ -1,0 +1,14 @@
+J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\BLL\bin\Debug\BLL.dll
+J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\BLL\bin\Debug\BLL.pdb
+J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\BLL\bin\Debug\DAL.dll
+J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\BLL\bin\Debug\Ninject.dll
+J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\BLL\bin\Debug\EntityFramework.dll
+J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\BLL\bin\Debug\DAL.pdb
+J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\BLL\bin\Debug\DAL.dll.config
+J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\BLL\bin\Debug\Ninject.xml
+J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\BLL\bin\Debug\EntityFramework.xml
+J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\BLL\obj\Debug\BLL.csproj.CopyComplete
+J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\BLL\obj\Debug\BLL.dll
+J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\BLL\obj\Debug\BLL.pdb
