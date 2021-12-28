@@ -12,6 +12,7 @@
      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
      TextElement.FontWeight="Regular"
      TextElement.FontSize="13"
+     TextElement.FontFamily="Bahnschrift"
      TextOptions.TextFormattingMode="Ideal"
      TextOptions.TextRenderingMode="Auto"
      Background="{DynamicResource MaterialDesignPaper}"
@@ -67,9 +68,9 @@
                         <TextBlock HorizontalAlignment="Center" Text="Устройства" Foreground="White" FontSize="30"/>
                     </Grid>
                 </Button>
-                <Button Command="{Binding CustomerCommand}" x:Name="ClientMenuButton"  Margin="2,10,2,5" Background="#9147ff" Height="80" FontSize="30" >
+                <Button Command="{Binding IncomeCommand}" x:Name="IncomeMenuButton"  Margin="2,10,2,5" Background="#9147ff" Height="80" FontSize="30" >
                     <Grid Width="270">
-                        <TextBlock HorizontalAlignment="Center" Text="Клиенты" Foreground="White" FontSize="30"/>
+                        <TextBlock HorizontalAlignment="Center" Text="Доход" Foreground="White" FontSize="30"/>
                     </Grid>
                 </Button>
                 <Button Command="{Binding ProductCommand}" x:Name="CourierMenuButton" Margin="2,10,2,5" Background="#9147ff" Height="80" >
@@ -85,15 +86,15 @@
 
         <Grid x:Name="UpperBar" Grid.ColumnSpan="3" Background="#7741c9" MouseDown="UpperBar_MouseDown">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10, 0">
-                <TextBlock VerticalAlignment="Center" Margin="10, 0" Text="Game Club Manage" FontSize="24" FontWeight="Bold" Foreground="#DDFFFFFF"></TextBlock>
+                <TextBlock VerticalAlignment="Center" Margin="10, 0" Text="Game Club" FontSize="30" FontWeight="Bold" Foreground="#DDFFFFFF"></TextBlock>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10, 0">
 
-                <Button x:Name="NormalSizeButton"  Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Padding="5" Visibility="Collapsed"  Width="45" Height="45" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click=" NormalSizeButton_Click">
+                <Button x:Name="NormalSizeButton"  Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Padding="5" Visibility="Collapsed"  Width="45" Height="45" Background="White" BorderBrush="{x:Null}" Foreground="White" Click=" NormalSizeButton_Click">
                 </Button>
 
-                <Button x:Name="FullSizeButton" Padding="5" Width="45" Height="45" Background="#f4f636" BorderBrush="{x:Null}" Foreground="White" Click="FullSizeButton_Click">
+                <Button x:Name="FullSizeButton" Padding="5" Width="45" Height="45" Background="White" BorderBrush="{x:Null}" Foreground="White" Click="FullSizeButton_Click">
                 </Button>
 
                 <Button x:Name="CloseButton" Padding="5" Width="45" Height="45" Background="#ef2366" BorderBrush="{x:Null}" Foreground="White" Click="CloseButton_Click">

@@ -9,3 +9,4 @@ J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\Game
 J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\DAL\obj\Debug\DAL.csproj.CopyComplete
 J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\DAL\obj\Debug\DAL.dll
 J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\DAL\obj\Debug\DAL.pdb
+J:\ИГЭУ обучение\5 семестр\Фомина\Курсовая\GameClub\DAL\obj\Debug\DAL.csprojAssemblyReference.cache

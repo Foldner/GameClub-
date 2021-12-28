@@ -40,7 +40,7 @@ namespace BLL.Interfaces
         void DeleteDeviceType(int id);
 
 
-        void CreateOrder(OrderModel t);
+        int CreateOrder(OrderModel t);
         void UpdateOrder(OrderModel t);
         void DeleteOrder(int id);
 

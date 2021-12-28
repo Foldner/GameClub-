@@ -8,11 +8,9 @@ namespace DAL.Entities
 {
     public class IncomeModel
     {
-        //public int ID { get; set; }
+        public int Id { get; set; }
 
-        //public string CourierName { get; set; }
-
-        //public double Salary { get; set; }
+        public double Income { get; set; }
 
     }
 }

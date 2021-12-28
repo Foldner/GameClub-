@@ -75,7 +75,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Views\Frames\Main\CustomersMain.xaml">
+    <Page Include="Views\Frames\Income\IncomeCounter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -87,7 +87,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Frames\Main\ProductsMain.xaml">
+    <Page Include="Views\Frames\Order\EditPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -101,16 +101,17 @@
     <Compile Include="Navigation\MainNavigation.cs" />
     <Compile Include="RelayCommand.cs" />
     <Compile Include="ViewModels\VMBase.cs" />
+    <Compile Include="ViewModels\VMCountIncome.cs" />
     <Compile Include="ViewModels\VMDevice.cs" />
     <Compile Include="ViewModels\VMMainWindow.cs" />
     <Compile Include="ViewModels\VMOrder.cs" />
-    <Compile Include="ViewModels\VMProduct.cs" />
+    <Compile Include="ViewModels\VMOrderEdit.cs" />
     <Compile Include="Views\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Views\Frames\Main\CustomersMain.xaml.cs">
-      <DependentUpon>CustomersMain.xaml</DependentUpon>
+    <Compile Include="Views\Frames\Income\IncomeCounter.xaml.cs">
+      <DependentUpon>IncomeCounter.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Frames\Main\DevicesMain.xaml.cs">
       <DependentUpon>DevicesMain.xaml</DependentUpon>
@@ -118,8 +119,8 @@
     <Compile Include="Views\Frames\Main\OrdersMain.xaml.cs">
       <DependentUpon>OrdersMain.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Frames\Main\ProductsMain.xaml.cs">
-      <DependentUpon>ProductsMain.xaml</DependentUpon>
+    <Compile Include="Views\Frames\Order\EditPage.xaml.cs">
+      <DependentUpon>EditPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

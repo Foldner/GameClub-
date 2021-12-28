@@ -15,7 +15,7 @@ namespace BLL.Services
         IReportsReprository reports;
         public List<IncomeCountModel> CountIncome(DateTime s, DateTime f)
         {
-            var inc = reports.IncomeCount(s, f).Select(i => new IncomeCountModel { Id = i.Id, TotalCost = i.TotalCost, Income = i.Income }).ToList();
+            var inc = reports.IncomeCount(s, f).Select(i => new IncomeCountModel { Id = i.Id, Income = i.Income }).ToList();
             return inc;
         }
 

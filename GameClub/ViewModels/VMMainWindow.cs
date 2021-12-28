@@ -2,6 +2,7 @@
 using System.Windows.Controls;
 using System.Windows;
 using GameClub.Views.Frames.Main;
+using GameClub.Views.Frames.Income;
 //using GameClub.Views.Frames;
 
 namespace GameClub.ViewModels
@@ -16,7 +17,7 @@ namespace GameClub.ViewModels
 
         OrdersMain ordersPage;
         DevicesMain devicesPage;
-        //CustomersMain customersPage;
+        IncomeCounter incomePage;
         //ProductsMain productsPage;
 
 
@@ -56,22 +57,22 @@ namespace GameClub.ViewModels
         }
 
 
-        //private RelayCommand customerCommand;
-        //public RelayCommand CustomerCommand
-        //{
-        //    get
-        //    {
-        //        return customerCommand ?? (customerCommand = new RelayCommand(obj =>
-        //        {
-        //            if (customersPage == null)
-        //            {
-        //                customersPage = new CustomersMain();
-        //            }
-        //            navigation.Navigate(customersPage);
-        //            navigation.ChangeVisibility(Visibility.Hidden);
-        //        }));
-        //    }
-        //}
+        private RelayCommand incomeCommand;
+        public RelayCommand IncomeCommand
+        {
+            get
+            {
+                return incomeCommand ?? (incomeCommand = new RelayCommand(obj =>
+                {
+                    if (incomePage == null)
+                    {
+                        incomePage = new IncomeCounter();
+                    }
+                    navigation.Navigate(incomePage);
+                    navigation.ChangeVisibility(Visibility.Hidden);
+                }));
+            }
+        }
 
         //private RelayCommand productCommand;
         //public RelayCommand ProductCommand

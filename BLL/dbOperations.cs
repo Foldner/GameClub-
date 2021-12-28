@@ -163,7 +163,7 @@ namespace BLL
             return cl;
         }
 
-        public void CreateOrder(OrderModel c)
+        public int CreateOrder(OrderModel c)
         {
             db.Orders.Create(new Order()
             {
@@ -175,6 +175,8 @@ namespace BLL
                 OrderTypeId = c.OrderTypeId
             });
             Save();
+            int id = db.Orders.GetList().Where(i => i.TotalCost == c.TotalCost && i.CustomerId == c.CustomerId && i.DeviceId == c.DeviceId && i.OrderTypeId == c.OrderTypeId).First().Id;
+            return id;          
         }
 
         public void UpdateOrder(OrderModel c)

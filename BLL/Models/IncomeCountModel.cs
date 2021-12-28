@@ -11,14 +11,11 @@ namespace BLL.Models
     {
         public int Id { get; set; }
 
-        public double? TotalCost { get; set; }
-
         public double Income { get; set; }
 
         public IncomeCountModel(Order o, double m)
         {
             Id = o.Id;
-            TotalCost = o.TotalCost;
             Income = m;
         }
         public IncomeCountModel() { }

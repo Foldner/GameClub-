@@ -13,7 +13,7 @@ using Ninject;
 using System.Collections.Specialized;
 using System.Collections.ObjectModel;
 using GameClub.Views.Frames;
-using GameClub.Views.Frames.Main;
+using GameClub.Views.Frames.Order;
 using System.IO;
 
 
@@ -156,11 +156,23 @@ namespace GameClub.ViewModels
             {
                 return editOrder ?? (editOrder = new RelayCommand(obj =>
                 {
-                    dbOperations.UpdateOrder(SelectedOrder);
+                    if (selectedOrder != null)
+                    {
+                        vmCrEd.SelectedOrder = selectedOrder;
+                        if (selectedOrder.Id != 0)
+                            vmCrEd.status = false;
+                        else
+                            vmCrEd.status = true;
+                        navigation.Navigate(crEdPage);
+                        navigation.ChangeVisibility(Visibility.Hidden);
+                    }
                 },
-                    (obj) => (selectedOrder != null && (!orderR))));
+                    (obj) => (selectedOrder != null)));
             }
         }
+
+        EditPage crEdPage;
+        VMOrderEdit vmCrEd;
 
         private RelayCommand createOrder;
         public RelayCommand CreateOrder
@@ -169,19 +181,13 @@ namespace GameClub.ViewModels
             {
                 return createOrder ?? (createOrder = new RelayCommand(obj =>
                 {
-                    if (!orderR)
-                    {
-                        SelectedOrder = new OrderModel();
-                        Order.Add(selectedOrder);
-                    }
-                    else
-                    {
-                        dbOperations.CreateOrder(selectedOrder);
-                        Order = new ObservableCollection<OrderModel>(dbOperations.GetAllOrders());
-                        SelectedOrder = null;
-                    }
-                    CreateOrderChanged();
+                    SelectedOrder = new OrderModel();
+                    SelectedOrder.OrderDate = DateTime.Now;
+                    vmCrEd.SelectedOrder = selectedOrder;
+                    vmCrEd.status = true;
 
+                    navigation.Navigate(crEdPage);
+                    navigation.ChangeVisibility(Visibility.Hidden);
                 }));
             }
         }
@@ -277,6 +283,12 @@ namespace GameClub.ViewModels
             TextCreate = "Новый";
             KindCreate = "Add";
             orderR = false;
+
+            navigation.ChangeVisibility(Visibility.Hidden);
+
+            vmCrEd = new VMOrderEdit();
+
+            crEdPage = new EditPage(vmCrEd);
         }
     }
 }

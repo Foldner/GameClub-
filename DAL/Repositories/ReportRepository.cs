@@ -17,56 +17,41 @@ namespace DAL.Repositories
             db = dbcontext;
         }
 
-        public class preResSalary
+        public class preIncome
         {
-            public int ID { get; set; }
-            public int DelivID { get; set; }
-            public string CourierName { get; set; }
-            public double Price { get; set; }
-            public int? Car { get; set; }
+            public int Id { get; set; }
+            public double Income { get; set; }
         }
 
-        //public List<IncomeModel> IncomeCount(DateTime s, DateTime f)
-        //{
-            //var PreRes = (from cour in db.Order
-            //              join deliv in db.Device
-            //              on cour.Id equals deliv.Id
-            //              where (s <= deliv.Date && f >= deliv.Date)
-            //              select new preResSalary
-            //              {
-            //                  ID = cour.ID,
-            //                  DelivID = deliv.ID,
-            //                  CourierName = cour.CourierName,
-            //                  Price = deliv.Distance * deliv.KmPrice,
-            //                  Car = deliv.Transport_ID_FK
-            //              }).ToList();
-
-            //List<Order> allorders = db.Order.ToList();
-            //double ordCount;
-
-            //foreach (preResSalary ps in PreRes)
-            //{
-            //    ordCount = allorders.Where(i => i.Delivery_ID_FK == ps.DelivID).Count();
-            //    if (ps.Car != null || ps.Car != 1)
-            //        ps.Price = ps.Price * 0.75;
-            //    ps.Price = ps.Price * (0.9 + (ordCount / 10));
-            //}
-
-        //    var CourSal = (from pr in PreRes
-        //                   group pr by new { pr.ID, pr.CourierName } into g
-        //                   select new CourierSalaryModel
-        //                   {
-        //                       ID = g.Key.ID,
-        //                       CourierName = g.Key.CourierName,
-        //                       Salary = g.Sum(x => x.Price)
-        //                   }
-        //                  ).ToList();
-        //    return null;
-        //}
-
-        List<IncomeCountModel> IReportsReprository.IncomeCount(DateTime s, DateTime f)
+        public List<IncomeCountModel> IncomeCount(DateTime s, DateTime f)
         {
-            throw new NotImplementedException();
+            var PreRes = (from ord in db.Order                         
+                          where (s <= ord.OrderDate && f >= ord.OrderDate)
+                          select new preIncome
+                          {
+                              Id = ord.Id,
+                              Income = (double)ord.TotalCost,
+                          }).ToList();
+
+            List<Order> allorders = db.Order.ToList();
+            double incomeCount = 0;
+
+            foreach (preIncome ps in PreRes)
+            {
+                incomeCount += ps.Income;
+            }
+
+            //var TotalIncome = new IncomeCountModel { Id = 1, Income = incomeCount};
+
+            var TotalIncome = (from pr in PreRes
+                           where (pr.Id == 1)
+                           select new IncomeCountModel
+                           {
+                               Id = 1,
+                               Income = incomeCount
+                           }
+                          ).ToList();
+            return TotalIncome;
         }
     }
 }
